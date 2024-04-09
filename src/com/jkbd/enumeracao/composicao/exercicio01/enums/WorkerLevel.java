@@ -1,4 +1,4 @@
-package com.jkbd.enumeracao.composicao.exercicio.enums;
+package com.jkbd.enumeracao.composicao.exercicio01.enums;
 
 public enum WorkerLevel {
     JUNIOR,

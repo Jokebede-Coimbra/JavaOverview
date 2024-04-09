@@ -1,9 +1,9 @@
-package com.jkbd.enumeracao.composicao.exercicio.application;
+package com.jkbd.enumeracao.composicao.exercicio01.application;
 
-import com.jkbd.enumeracao.composicao.exercicio.entities.Department;
-import com.jkbd.enumeracao.composicao.exercicio.entities.HourContract;
-import com.jkbd.enumeracao.composicao.exercicio.entities.Worker;
-import com.jkbd.enumeracao.composicao.exercicio.enums.WorkerLevel;
+import com.jkbd.enumeracao.composicao.exercicio01.entities.Department;
+import com.jkbd.enumeracao.composicao.exercicio01.entities.HourContract;
+import com.jkbd.enumeracao.composicao.exercicio01.entities.Worker;
+import com.jkbd.enumeracao.composicao.exercicio01.enums.WorkerLevel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

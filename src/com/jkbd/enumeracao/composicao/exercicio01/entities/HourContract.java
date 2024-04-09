@@ -1,4 +1,4 @@
-package com.jkbd.enumeracao.composicao.exercicio.entities;
+package com.jkbd.enumeracao.composicao.exercicio01.entities;
 
 import java.util.Date;
 

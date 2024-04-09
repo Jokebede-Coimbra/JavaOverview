@@ -1,6 +1,6 @@
-package com.jkbd.enumeracao.composicao.exercicio.entities;
+package com.jkbd.enumeracao.composicao.exercicio01.entities;
 
-import com.jkbd.enumeracao.composicao.exercicio.enums.WorkerLevel;
+import com.jkbd.enumeracao.composicao.exercicio01.enums.WorkerLevel;
 
 import java.util.ArrayList;
 import java.util.Calendar;
