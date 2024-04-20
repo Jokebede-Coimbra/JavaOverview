@@ -1,4 +1,4 @@
-package com.jkbd.heranca.polimorfismo.entities;
+package com.jkbd.sobreposicao.entities;
 
 public class Account {
     private Integer number;
