@@ -27,7 +27,7 @@ public class Individual extends TaxPayer {
         } else {
             taxI = getAnualIncome() * 0.25;
         }
-        taxI = taxI - (getHealthExpenditures() * 0.5);
+        taxI -= (getHealthExpenditures() * 0.5);
         if (taxI < 0.0) {
             taxI = 0.0;
         }
