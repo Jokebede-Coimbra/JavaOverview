@@ -1,4 +1,4 @@
-package com.jkbd.estruturatrycatch.application;
+package com.jkbd.tratamentoexcecoes.estruturatrycatch.application;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
