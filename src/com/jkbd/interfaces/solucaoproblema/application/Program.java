@@ -24,7 +24,7 @@ public class Program {
         LocalDateTime finish = LocalDateTime.parse(sc.next(), fmt);
 
         CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
-        
+
         System.out.println("Enter price per hour: ");
         System.out.println("Enter price per day:");
         System.out.println("INVOICE");
