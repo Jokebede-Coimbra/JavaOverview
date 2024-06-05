@@ -10,11 +10,8 @@ public class Installment {
     private LocalDate date;
     private Double amount;
 
-    public Installment() {
-    }
-
     public Installment(LocalDate date, Double amount) {
-        date = date;
+        this.date = date;
         this.amount = amount;
     }
 

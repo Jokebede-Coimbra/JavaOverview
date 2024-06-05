@@ -3,6 +3,7 @@ package com.jkbd.exercicios.interfaces4.application;
 import com.jkbd.exercicios.interfaces4.entities.Contract;
 import com.jkbd.exercicios.interfaces4.entities.Installment;
 import com.jkbd.exercicios.interfaces4.service.ContractService;
+import com.jkbd.exercicios.interfaces4.service.PaypalService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -31,7 +32,7 @@ public class Program {
         System.out.print("Enter number of installments: ");
         int n = sc.nextInt();
 
-        ContractService contractService = new ContractService(null);
+        ContractService contractService = new ContractService(new PaypalService());
         contractService.processContract(contract, n);
 
         System.out.println("Parcelas: ");
