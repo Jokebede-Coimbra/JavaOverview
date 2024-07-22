@@ -18,7 +18,7 @@ public class Program {
 
         // Implementação da interface
         list.removeIf(new ProductPredicate());
-        
+
         // Usando reference method com método estático
         list.removeIf(Product::staticProductPredicate);
 
