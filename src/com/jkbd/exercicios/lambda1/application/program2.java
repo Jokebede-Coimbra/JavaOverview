@@ -1,4 +1,4 @@
-package com.jkbd.exercicios.stream.application;
+package com.jkbd.exercicios.lambda1.application;
 
 import com.jkbd.programacaofuncionalexpressoeslambda.predicate.entities.Product;
 

@@ -1,4 +1,4 @@
-package com.jkbd.exercicios.stream.application;
+package com.jkbd.exercicios.lambda1.application;
 
 import com.jkbd.programacaofuncionalexpressoeslambda.predicate.entities.Product;
 
@@ -8,9 +8,9 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class program {
+public class program3 {
     public static void main(String[] args) {
-// D:\\Java2024\\Udemy-Nelio\\temp\\in.txt
+
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
@@ -18,9 +18,7 @@ public class program {
         String path = sc.nextLine();
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-
             List<Product> list = new ArrayList<>();
-
             String line = br.readLine();
             while (line != null) {
                 String[] fields = line.split(",");
@@ -28,23 +26,31 @@ public class program {
                 line = br.readLine();
             }
 
-            double avg = list.stream().map(p -> p.getPrice())
-                    .reduce(0.0, (x, y) -> x + y) / list.size();
-
+            double avg = calculateAveragePrice(list);
             System.out.println("Average price: " + String.format("%.2f", avg));
 
-            Comparator<String> comp = (s1, s2) -> s1.toUpperCase().compareTo(s2.toUpperCase());
-
-            List<String> names = list.stream().filter(p -> p.getPrice() < avg)
-                    .map(p -> p.getName())
-                    .sorted(comp.reversed())
-                    .collect(Collectors.toList());
-
+            List<String> names = findProductNamesBelowAverage(list, avg);
             names.forEach(System.out::println);
+
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
 
         sc.close();
+    }
+
+    private static double calculateAveragePrice(List<Product> products) {
+        return products.stream()
+                .mapToDouble(Product::getPrice)
+                .average()
+                .orElse(0.0);
+    }
+
+    private static List<String> findProductNamesBelowAverage(List<Product> products, double averagePrice) {
+        return products.stream()
+                .filter(p -> p.getPrice() < averagePrice)
+                .map(Product::getName)
+                .sorted(Comparator.comparing((String s) -> s.toUpperCase(Locale.ROOT)).reversed())
+                .collect(Collectors.toList());
     }
 }

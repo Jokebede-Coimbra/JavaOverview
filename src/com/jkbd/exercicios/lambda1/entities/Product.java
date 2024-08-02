@@ -1,4 +1,4 @@
-package com.jkbd.exercicios.stream.entities;
+package com.jkbd.exercicios.lambda1.entities;
 
 public class Product {
     private String name;
